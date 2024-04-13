@@ -1,0 +1,9 @@
+{
+	"name": "CarcrashADF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "32bda832-e575-4c34-bdc7-72f977ed2b05",
+		"tenantId": "0fd31d0e-aeca-4f04-b8b1-9e4dc1cb9505"
+	}
+}
