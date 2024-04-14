@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "h9gi-nx95/rows.csv?accessType=DOWNLOAD"
+				"relativeUrl": "Accumulation-accounts-2008-2022-provisional.csv"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
