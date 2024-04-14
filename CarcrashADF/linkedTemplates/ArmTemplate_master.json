@@ -17,7 +17,7 @@
 		},
 		"HttpServer_source_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://www.stats.govt.nz/assets/Uploads/"
+			"defaultValue": "https://data.cityofnewyork.us/api/views/"
 		},
 		"containerUri": {
 			"type": "string",

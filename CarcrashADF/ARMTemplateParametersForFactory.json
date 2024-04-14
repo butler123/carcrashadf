@@ -12,7 +12,7 @@
 			"value": "https://crashprojectstorageacc.dfs.core.windows.net/"
 		},
 		"HttpServer_source_properties_typeProperties_url": {
-			"value": "https://www.stats.govt.nz/assets/Uploads/"
+			"value": "https://data.cityofnewyork.us/api/views/"
 		}
 	}
 }
