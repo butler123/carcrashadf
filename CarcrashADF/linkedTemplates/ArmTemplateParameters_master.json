@@ -8,11 +8,11 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
-		"RestService1_properties_typeProperties_url": {
-			"value": "https://data.cityofnewyork.us/api/views/h9gi-nx95/rows.csv?accessType=DOWNLOAD"
-		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://crashprojectstorageacc.dfs.core.windows.net/"
+		},
+		"HttpServer_source_properties_typeProperties_url": {
+			"value": "https://www.stats.govt.nz/assets/Uploads/"
 		},
 		"containerUri": {
 			"value": ""
