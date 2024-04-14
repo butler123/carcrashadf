@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://www.stats.govt.nz/assets/Uploads/",
+			"url": "https://data.cityofnewyork.us/api/views/",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
