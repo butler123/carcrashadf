@@ -9,7 +9,8 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "HttpServerLocation",
+				"relativeUrl": "h9gi-nx95/rows.csv?accessType=DOWNLOAD"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
