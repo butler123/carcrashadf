@@ -5,12 +5,20 @@
 			"referenceName": "HttpServer_source",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"source_file_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "833y-fsy8/rows.csv?accessType=DOWNLOAD"
+				"relativeUrl": {
+					"value": "@concat(dataset().source_file_name,'/rows.csv?accessType=DOWNLOAD')",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
