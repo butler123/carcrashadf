@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "Accumulation-accounts-2008-2022-provisional.csv"
+				"relativeUrl": "Annual-balance-sheets/Annual-balance-sheets-2022-provisional/Downloads/Accumulation-accounts-2008-2022-provisional.csv"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
