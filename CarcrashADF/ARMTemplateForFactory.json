@@ -114,6 +114,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"fileName": "shooting_data",
 						"folderPath": "data",
 						"fileSystem": "raw"
 					},
