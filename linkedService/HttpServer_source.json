@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://data.cityofnewyork.us/api/views/",
+			"url": "https://www.stats.govt.nz/assets/Uploads/Annual-balance-sheets/Annual-balance-sheets-2022-provisional/Downloads/",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
