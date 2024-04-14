@@ -7,7 +7,14 @@
 				"type": "Copy",
 				"state": "Inactive",
 				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -51,7 +58,13 @@
 				"inputs": [
 					{
 						"referenceName": "DelimitedText_source",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"source_file_name": {
+								"value": "@activity('Lookup1').output.value[0].sourcefilename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -60,7 +73,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"sink_path": {
-								"value": "@activity('Lookup1').output.value.SinkPath",
+								"value": "@activity('Lookup1').output.value[0].sinkpath",
+								"type": "Expression"
+							},
+							"sink_file_name": {
+								"value": "@activity('Lookup1').output.value[0].sinkfilename",
 								"type": "Expression"
 							}
 						}
@@ -82,7 +99,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select top (1)\n[SourceFileName],\n[SinkPath],\n[SinkFileName]\nfrom DataIngestionConfig",
+						"sqlReaderQuery": "select \n[SourceFileName],\n[SinkPath],\n[SinkFileName]\nfrom DataIngestionConfig",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -91,30 +108,6 @@
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
-				}
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "Lookup1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "sink_path",
-					"value": {
-						"value": "@activity('Lookup1').output.value",
-						"type": "Expression"
-					}
 				}
 			}
 		],
